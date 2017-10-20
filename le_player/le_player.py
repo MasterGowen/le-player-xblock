@@ -69,6 +69,27 @@ class LePlayerXBlock(XBlock):
         fragment.initialize_js('LePlayerXBlock')
         return fragment
 
+    def studio_view(self, *args, **kwargs):
+        context = {
+            "display_name": self.display_name,
+            "video_id": self.video_id,
+            "video_url": self.video_url,
+        }
+
+        fragment = Fragment()
+        fragment.add_content(
+            render_template(
+                'static/html/le_player_edit.html',
+                context
+            )
+        )
+        js_urls = (
+            "static/js/le_player_edit.js",
+        )
+
+        self.load_resources(js_urls, fragment)
+        fragment.initialize_js('LePlayerXBlockEdit')
+
     # TO-DO: change this handler to perform your own actions.  You may need more
     # than one handler, or you may not need any handlers at all.
     @XBlock.json_handler
