@@ -95,3 +95,6 @@ ENV/
 # Rope project settings
 .ropeproject
 .idea/
+.gitignore
+le_player/
+setup.py

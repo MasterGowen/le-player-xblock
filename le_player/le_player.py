@@ -17,7 +17,6 @@ logger = logging.getLogger(__name__)
 _ = lambda text: text
 
 
-@XBlock.needs("i18n")
 class LePlayerXBlock(XBlock):
     """
     Lektoriy player implementation for OpenEdx
