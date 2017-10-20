@@ -1,0 +1,9 @@
+/* CSS for LePlayerXBlock */
+
+.le_player_block .count {
+    font-weight: bold;
+}
+
+.le_player_block p {
+    cursor: pointer;
+}
